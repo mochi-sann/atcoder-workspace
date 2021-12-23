@@ -1,10 +1,10 @@
 [codestyle]
 indent_type='space' # 'tab' or 'space'
 indent_width=2
-template_file='~/atcoder-workspace/my_template.cpp'
+ template_file='~/atcoder-workspace/my_template.cpp'
 workspace_dir='~/atcoder-workspace/'
 lang='cpp' # Check README.md for the supported languages.
-code_generator_file="~/custom_code_generator.py"
+# code_generator_file="~/custom_code_generator.py"
 [postprocess]
 exec_on_each_problem_dir='clang-format -i ./*.cpp'
 exec_on_contest_dir='touch CMakeLists.txt'
