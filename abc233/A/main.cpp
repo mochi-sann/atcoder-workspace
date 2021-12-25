@@ -14,12 +14,17 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  int a; 
-  cin >> a; 
-  
-  cout << a << endl;
-  rrep(i , -100) {
-    cout << i << endl;
+  int x, y; 
+  cin >> x >> y;
+  int ans = y - x;
+  if (ans < 0) {
+    cout << 0 << endl;
+  } else {
+    if (ans % 10 == 0) {
+      cout << ans / 10 << endl;
+    } else {
+      cout << ans / 10 + 1 << endl;
+    }
   }
   return 0;
 }

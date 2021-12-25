@@ -11,7 +11,7 @@ a.out
 *.slo
 *.lo
 *.o
-*.obj
+
 
 # Precompiled Headers
 *.gch
@@ -107,3 +107,4 @@ tags
 !.vscode/*.code-snippets
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,visualstudiocode,macos,c++
+main

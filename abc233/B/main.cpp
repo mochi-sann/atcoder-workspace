@@ -14,12 +14,24 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  int a; 
-  cin >> a; 
-  
-  cout << a << endl;
-  rrep(i , -100) {
-    cout << i << endl;
+  int l ,r; 
+  cin >> l >> r;
+  string s;  
+  cin >> s;
+  string hantenSiruTxt;
+  for_(i, l - 1, r ) {
+    hantenSiruTxt += s[i ];
   }
+//  cout << hantenSiruTxt << endl;
+  rep(i, l -1){
+    cout << s[i];
+  }
+  rrep(i, hantenSiruTxt.length()) {
+    cout << hantenSiruTxt[i];
+  }
+  for_(i, r, s.length()) {
+    cout << s[i];
+  }
+  cout << endl;
   return 0;
 }
