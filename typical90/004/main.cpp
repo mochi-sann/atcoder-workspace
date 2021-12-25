@@ -14,12 +14,20 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  int a; 
-  cin >> a; 
-  
-  cout << a << endl;
-  rrep(i , -100) {
-    cout << i << endl;
+  int h , w;
+  cin >> h >> w;
+  int returnV = 0;
+  rep(i, h * w) {
+    int a;
+    cin >> a;
+    returnV = returnV + a;
+
+    cout << returnV << endl;
   }
+
+
+
+
+  cout << returnV << endl;
   return 0;
 }
