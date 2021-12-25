@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
 #define max(a, b) ((a)>(b) ? (a) : (b)) // 大きい方を返す
 
@@ -14,12 +16,14 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  int a; 
-  cin >> a; 
-  
-  cout << a << endl;
-  rrep(i , -100) {
-    cout << i << endl;
-  }
+  string s; 
+  cin >> s; 
+  ll ans = 700;
+if (s[0] == 'o') ans = ans + 100;
+
+if (s[1] == 'o') ans = ans + 100;
+if (s[2] == 'o') ans = ans + 100;
+
+  cout << ans << endl;
   return 0;
 }
