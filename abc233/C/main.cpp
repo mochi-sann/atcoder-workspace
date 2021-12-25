@@ -13,13 +13,35 @@ using namespace std;
 
 typedef long long ll;
 
+int L[10020][10020];
+int Llist[100000];
 int main() {
-  int a; 
-  cin >> a; 
+  int n,x; 
+  cin >> n >> x;
   
-  cout << a << endl;
-  rrep(i , -100) {
-    cout << i << endl;
+  rep(i, n){
+    int l ;
+    cin >> l;
+    Llist[i] = l;
+    rep(ii, l){
+      int a;
+      cin >> a;
+      L[i][ii] = a;
+    }
   }
+  int ans = 0;
+
+  rep(h , n){
+    int hoge;
+    rep(x, L[h].length){
+    
+      cout << L[h][x] << endl;
+    }
+      rep(i , Llist[h] +1 ){
+       int firlst =  L[h][i];
+
+      }
+  }
+  cout << ans << endl;
   return 0;
 }
