@@ -19,3 +19,11 @@ cd ~/atcoder-workspace/agc001/A
 g++ main.cpp
 atcoder-tools test
 ```
+
+# format tools
+
+format codes
+
+```:bash
+clang-format -i  -style=file  ./**/*.cpp
+```
