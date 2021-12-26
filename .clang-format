@@ -1,0 +1,9 @@
+
+BasedOnStyle: LLVM
+ContinuationIndentWidth: 2
+IndentWidth: 2
+NamespaceIndentation: All
+UseTab: ForIndentation
+BreakBeforeBraces: Custom
+BraceWrapping:
+  IndentBraces: false

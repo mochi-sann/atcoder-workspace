@@ -1,10 +1,9 @@
 #include <iostream>
 using namespace std;
-#define max(a, b) ((a)>(b) ? (a) : (b)) // 大きい方を返す
+#define max(a, b) ((a) > (b) ? (a) : (b))  // 大きい方を返す
 
-
-#define for_(i, a, b) for(int i = (a);i < (b);++i)
-#define rfor_(i, a, b) for(int i = (b)-1;i >= (a);--i)
+#define for_(i, a, b) for (int i = (a); i < (b); ++i)
+#define rfor_(i, a, b) for (int i = (b)-1; i >= (a); --i)
 #define rep(i, n) for_(i, 0, n)
 //  rep(i, 10)cout << i << endl;
 // for 文を短くする
@@ -14,12 +13,12 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  int n; 
-  cin >> n ;
+  int n;
+  cin >> n;
   if (n % 2 == 0) {
-    cout << n /2 << endl;
+    cout << n / 2 << endl;
   } else {
-  cout << (n + 1) / 2 << endl;
+    cout << (n + 1) / 2 << endl;
   }
   return 0;
 }

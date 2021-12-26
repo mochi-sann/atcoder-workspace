@@ -1,11 +1,10 @@
 #include <iostream>
 #include <string>
 using namespace std;
-#define max(a, b) ((a)>(b) ? (a) : (b)) // 大きい方を返す
+#define max(a, b) ((a) > (b) ? (a) : (b))  // 大きい方を返す
 
-
-#define for_(i, a, b) for(int i = (a);i < (b);++i)
-#define rfor_(i, a, b) for(int i = (b)-1;i >= (a);--i)
+#define for_(i, a, b) for (int i = (a); i < (b); ++i)
+#define rfor_(i, a, b) for (int i = (b)-1; i >= (a); --i)
 #define rep(i, n) for_(i, 0, n)
 //  rep(i, 10)cout << i << endl;
 // for 文を短くする
@@ -15,14 +14,12 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  string a; 
+  string a;
 
-  cin >> a; 
-  
-  cout << "2018" ;
-  for_(i, 4, 10){
-    cout << a[i] ;
-  }
+  cin >> a;
+
+  cout << "2018";
+  for_(i, 4, 10) { cout << a[i]; }
   cout << endl;
   return 0;
 }
