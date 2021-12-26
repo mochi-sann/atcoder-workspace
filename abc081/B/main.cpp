@@ -14,12 +14,28 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  ll a;
-  cin >> a;
+int A[300];
+int N;
+cin >> N;
+rep(i, N) cin >> A[i];
+int asn =0;
 
-  cout << a << endl;
-  rrep(i , -100) {
-    cout << i << endl;
+while (true) {
+  bool IsOdd = false;
+  rep(i, N){
+    if (A[i] % 2 != 0) {
+      IsOdd = true;
+    }
   }
+  if (IsOdd) {
+    break;
+  }
+  rep(i, N){
+    A[i] /= 2;
+  }
+  asn = asn + 1;
+
+}
+cout << asn << endl;
   return 0;
 }
