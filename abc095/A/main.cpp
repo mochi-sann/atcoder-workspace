@@ -2,7 +2,7 @@
 #include <string>
 
 using namespace std;
-#define max(a, b) ((a) > (b) ? (a) : (b))  // 大きい方を返す
+#define max(a, b) ((a) > (b) ? (a) : (b)) // 大きい方を返す
 
 #define for_(i, a, b) for (int i = (a); i < (b); ++i)
 #define rfor_(i, a, b) for (int i = (b)-1; i >= (a); --i)
@@ -18,10 +18,13 @@ int main() {
   string s;
   cin >> s;
   ll ans = 700;
-  if (s[0] == 'o') ans = ans + 100;
+  if (s[0] == 'o')
+    ans = ans + 100;
 
-  if (s[1] == 'o') ans = ans + 100;
-  if (s[2] == 'o') ans = ans + 100;
+  if (s[1] == 'o')
+    ans = ans + 100;
+  if (s[2] == 'o')
+    ans = ans + 100;
 
   cout << ans << endl;
   return 0;

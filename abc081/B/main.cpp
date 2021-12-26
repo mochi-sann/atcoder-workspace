@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#define max(a, b) ((a) > (b) ? (a) : (b))  // 大きい方を返す
+#define max(a, b) ((a) > (b) ? (a) : (b)) // 大きい方を返す
 
 #define for_(i, a, b) for (int i = (a); i < (b); ++i)
 #define rfor_(i, a, b) for (int i = (b)-1; i >= (a); --i)
@@ -23,7 +23,7 @@ int main() {
     bool IsOdd = false;
     rep(i, N) {
       if (A[i] % 2 != 0) {
-        IsOdd = true;
+	IsOdd = true;
       }
     }
     if (IsOdd) {
