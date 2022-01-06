@@ -15,7 +15,7 @@ typedef long long ll;
 int main() {
   int s;
   cin >> s;
-  int h =s / 3600;
+  int h = s / 3600;
   int m = s % 3600 / 60;
   s = s % 60;
   cout << h << ":" << m << ":" << s << endl;

@@ -23,7 +23,7 @@ int main() {
     while (true) {
       // 奇数になったら終了
       if (i % 2 != 0) {
-	      break;
+	break;
       };
       nmu = nmu / 2;
       kaisuu++;

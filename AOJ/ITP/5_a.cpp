@@ -1,6 +1,7 @@
 
 
 #include <iostream>
+#include <string>
 using namespace std;
 #define max(a, b) ((a) > (b) ? (a) : (b)) // 大きい方を返す
 
@@ -18,11 +19,16 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  double r, aa, ab;
-  cin >> r;
-  double pi = 3.141592653589;
-  // cout <<r *r  * 3.141592653589  << " " << r  * 3.141592653589 * 2  << endl;
-  printf("%f %f\n", r * r * 3.141592653589, r * 3.141592653589 * 2);
-
+  while (true) {
+    int h, w;
+    cin >> h >> w;
+    if (h == 0 && w == 0)
+      break;
+    rep(i, h) {
+      rep(ii, w) { cout << "#"; }
+      cout << endl;
+    }
+    cout << endl;
+  }
   return 0;
 }
