@@ -13,13 +13,26 @@ using namespace std;
 typedef long long ll;
 int ans = 0;
 int N;
+int warukazu;
+
 int main() {
   cin >> N;
-  int asn = 0;
   rep(i, N) {
-    if (i % 2 == 0) {
-      ans += i;
+    int nmu = i;
+    int kaisuu = 0;
+    while (true) {
+      // 奇数になったら終了
+      if (i % 2 != 0) {
+	      break;
+      };
+      nmu = nmu / 2;
+      kaisuu++;
+    }
+    if (kaisuu > warukazu) {
+      warukazu = kaisuu;
+      ans = i;
     }
   }
+  cout << ans << endl;
   return 0;
 }
