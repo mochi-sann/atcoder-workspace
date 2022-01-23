@@ -13,10 +13,24 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  ll a;
-  cin >> a;
+  string S;
+  ll a,b;
+  cin >> S >> a >> b;
+  
 
-  cout << a << endl;
-  rrep(i, -100) { cout << i << endl; }
+  char SA = S[a];
+  char SB = S[b];
+
+  for_(l, 0, S.size()+ 1){
+    if(l == a) {
+      cout << "SB "<<SB;
+    } else if(l == b ) {
+      cout << "SA "<<SA;
+    } else {
+      cout << S[l];
+    }
+
+  }
+
   return 0;
 }
