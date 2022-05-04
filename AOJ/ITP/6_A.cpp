@@ -21,12 +21,12 @@ int main() {
   int a[1002];
   int n;
   cin >> n;
-    rep(i, n) cin >> a[i];
-    rrep(i, n){
-      cout << a[i];
-      if (i ) cout << " ";
-
-     }
-    cout << endl;
-      return 0;
+  rep(i, n) cin >> a[i];
+  rrep(i, n) {
+    cout << a[i];
+    if (i)
+      cout << " ";
+  }
+  cout << endl;
+  return 0;
 }
