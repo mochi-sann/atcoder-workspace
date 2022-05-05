@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 #define max(a, b) ((a) > (b) ? (a) : (b)) // 大きい方を返す
 
@@ -14,23 +13,8 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  int N;
-  int a[110];  // 最大 100 個ですが余裕をもたせます
-  cin >> N;
-  for (int i = 0; i < N; ++i) cin >> a[i];
-
-  std::sort(a, a + N, greater<int>());  // a[0:N] を大きい順にソート
-  int Alice = 0;
-  int Bob = 0;
-  rep(i , N){ 
-    if (i %2 ==0)
-    {
-      Alice += a[i];
-    } else {
-      Bob += a[i];
-    };
-  };
-
-  cout << Alice - Bob << endl;
+  string c1, c2, c3;
+  cin >> c1 >> c2 >> c3;
+  cout << c1[0] << c2[1] << c3[2] << endl;
   return 0;
 }

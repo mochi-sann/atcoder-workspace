@@ -3,6 +3,7 @@ using namespace std;
 #define max(a, b) ((a) > (b) ? (a) : (b)) // 大きい方を返す
 
 #define for_(i, a, b) for (int i = (a); i < (b); ++i)
+#define for_i(i, a, b) for (int i = (a); i <= (b); ++i)
 #define rfor_(i, a, b) for (int i = (b)-1; i >= (a); --i)
 #define rep(i, n) for_(i, 0, n)
 //  rep(i, 10)cout << i << endl;
@@ -11,31 +12,35 @@ using namespace std;
 // for を大きい方から実行する
 
 typedef long long ll;
-int getSum(int num) {
-  int anser = 0; 
-  while (num > 0)
-  {
-    anser += num % 10;
-    num = num / 10;
-    
-  
-  }
-  return anser;
+int getSum(int n) { int sum = 0; 
+while (n  > 0)
+{
+  sum += n % 10;
+  n = n / 10;
 }
+return sum;
+}
+
 int main() {
-  int n, a, b;
-  cin >> n >> a >> b;
-  int ans= 0;
-  for (int i = 0; i <= n; i++) {
-    int sum = getSum(i);
-      // cout << "sum = " << sum << endl;
-    if (a<=sum && sum <= b)
-      {
-        ans += i;
+  ll n;
+  cin >> n;
+  int ans = 500000;
+  
+  for_i(ia,0 , n){ 
+    int ib = n - ia;
+    if (ia+ib == n){
+      int KuraiSumA = getSum(ia);
+      int KuraiSumB = getSum(ib);
+      if ((KuraiSumB + KuraiSumA) < ans) {
+        ans = KuraiSumB + KuraiSumA;
       }
+
+    }
+
+  }
+  rep(ia, n) {
   }
 
   cout << ans << endl;
-
   return 0;
 }
