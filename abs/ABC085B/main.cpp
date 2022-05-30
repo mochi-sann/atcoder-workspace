@@ -13,10 +13,24 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  ll a;
-  cin >> a;
+  int n;
+  cin >> n;
+  int d[120];
+  rep(i, n) { cin >> d[i]; }
 
-  cout << a << endl;
-  rrep(i, -100) { cout << i << endl; }
+  int num[110] = {0}; // バケット
+  for (int i = 0; i < n; ++i) {
+    num[d[i]]++; // d[i] が 1 個増える
+  }
+
+  int res = 0; // 答えを格納
+  for (int i = 1; i <= 100;
+       ++i) {     // 1 <= d[i] <= 100 なので 1 から 100 まで探索
+    if (num[i]) { // 0 より大きかったら
+      ++res;
+    }
+  }
+  cout << res << endl;
+
   return 0;
 }

@@ -1,8 +1,10 @@
+#include <algorithm>
 #include <iostream>
 using namespace std;
 #define max(a, b) ((a) > (b) ? (a) : (b)) // 大きい方を返す
 
 #define for_(i, a, b) for (int i = (a); i < (b); ++i)
+#define for_i(i, a, b) for (int i = (a); i <= (b); ++i)
 #define rfor_(i, a, b) for (int i = (b)-1; i >= (a); --i)
 #define rep(i, n) for_(i, 0, n)
 //  rep(i, 10)cout << i << endl;
@@ -13,10 +15,19 @@ using namespace std;
 typedef long long ll;
 
 int main() {
+  int n, k;
+  int l[70];
+  cin >> n >> k;
+  int total = 0;
+  rep(i, n) { cin >> l[i]; };
 
-  int i ;
-  cin >> i ;
-  cout << a << endl;
-  rrep(i, -100) { cout << i << endl; }
+  sort(l, l + n, greater<int>()); // a[0:N] を大きい順にソート
+
+  for_(i, 0, k){
+    total += l[i];
+    // cout << l[i] << endl;
+  };
+
+  cout << total << endl;
   return 0;
 }
