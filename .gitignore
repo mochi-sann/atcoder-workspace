@@ -109,4 +109,3 @@ tags
 # End of https://www.toptal.com/developers/gitignore/api/vim,visualstudiocode,macos,c++
 main
 .ccls-cache
-.ccls-cache/*
