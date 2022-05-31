@@ -2,7 +2,7 @@
 using namespace std;
 #define max(a, b) ((a) > (b) ? (a) : (b)) // 大きい方を返す
 
-#define for_(i, a, b) for (int i = (a); i < (b); ++i)
+#define for_(i, a, b) for (int i = (a); i <= (b); ++i)
 #define rfor_(i, a, b) for (int i = (b)-1; i >= (a); --i)
 #define rep(i, n) for_(i, 0, n)
 //  rep(i, 10)cout << i << endl;
@@ -14,9 +14,21 @@ typedef long long ll;
 
 int main() {
 
-  int i ;
-  cin >> i ;
-  cout << a << endl;
-  rrep(i, -100) { cout << i << endl; }
+  int N, Y;
+  cin >> N >> Y;
+  int re10000 = -1, re5000 = -1, re1000 = -1;
+  rep(i10000, N) {
+    rep(i5000, N) {
+      int i1000 = N - i10000 - i5000;
+      int total = i10000 * 10000 + i5000 * 5000 + i1000 * 1000;
+      if (total == Y && i1000 >= 0) {
+	re10000 = i10000;
+	re5000 = i5000;
+	re1000 = i1000;
+      }
+    }
+  }
+  cout << re10000 << " " << re5000 << " " << re1000 << endl;
+
   return 0;
 }

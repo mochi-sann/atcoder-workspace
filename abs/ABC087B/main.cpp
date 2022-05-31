@@ -18,17 +18,15 @@ int main() {
 
   int anser = 0;
   for (int ia = 0; ia <= A; ia++) {
-for (int ib = 0; ib <= B; ib++) {
-for (int ic = 0; ic <= C; ic++) {
-       int total = (ia  * 500) + (ib * 100) + (ic * 50);
-        if ( total == X) {
-	        anser++;
-        }
- 
-}
-}
-}
+    for (int ib = 0; ib <= B; ib++) {
+      for (int ic = 0; ic <= C; ic++) {
+	int total = (ia * 500) + (ib * 100) + (ic * 50);
+	if (total == X) {
+	  anser++;
+	}
+      }
+    }
+  }
 
   cout << anser << endl;
-
 }

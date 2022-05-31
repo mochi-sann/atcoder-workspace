@@ -12,27 +12,23 @@ using namespace std;
 
 typedef long long ll;
 int getSum(int num) {
-  int anser = 0; 
-  while (num > 0)
-  {
+  int anser = 0;
+  while (num > 0) {
     anser += num % 10;
     num = num / 10;
-    
-  
   }
   return anser;
 }
 int main() {
   int n, a, b;
   cin >> n >> a >> b;
-  int ans= 0;
+  int ans = 0;
   for (int i = 0; i <= n; i++) {
     int sum = getSum(i);
-      // cout << "sum = " << sum << endl;
-    if (a<=sum && sum <= b)
-      {
-        ans += i;
-      }
+    // cout << "sum = " << sum << endl;
+    if (a <= sum && sum <= b) {
+      ans += i;
+    }
   }
 
   cout << ans << endl;

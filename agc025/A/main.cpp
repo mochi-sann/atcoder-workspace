@@ -12,34 +12,31 @@ using namespace std;
 // for を大きい方から実行する
 
 typedef long long ll;
-int getSum(int n) { int sum = 0; 
-while (n  > 0)
-{
-  sum += n % 10;
-  n = n / 10;
-}
-return sum;
+int getSum(int n) {
+  int sum = 0;
+  while (n > 0) {
+    sum += n % 10;
+    n = n / 10;
+  }
+  return sum;
 }
 
 int main() {
   ll n;
   cin >> n;
   int ans = 500000;
-  
-  for_i(ia,0 , n){ 
+
+  for_i(ia, 0, n) {
     int ib = n - ia;
-    if (ia+ib == n){
+    if (ia + ib == n) {
       int KuraiSumA = getSum(ia);
       int KuraiSumB = getSum(ib);
       if ((KuraiSumB + KuraiSumA) < ans) {
-        ans = KuraiSumB + KuraiSumA;
+	ans = KuraiSumB + KuraiSumA;
       }
-
     }
-
   }
-  rep(ia, n) {
-  }
+  rep(ia, n) {}
 
   cout << ans << endl;
   return 0;

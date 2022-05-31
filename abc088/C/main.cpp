@@ -13,10 +13,23 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  int a;
-  cin >> a;
-
-  cout << a << endl;
-  rrep(i, -100) { cout << i << endl; }
+  int N, Y;
+  cin >> N >> Y;
+  // 10000円札
+  int re10000 = -1, re5000 = -1, re1000 = -1;
+  for_(a, 0, N) {
+    // 5000円札
+    for_(b, 0, N) {
+      // 1000円札
+      int c = N - a - b;
+      int total = a * 10000 + b * 5000 + c * 1000;
+      if (total == Y && a + b + c == N) {
+	re10000 = a;
+	re5000 = b;
+	re1000 = c;
+      }
+    }
+  }
+  cout << re10000 << " " << re5000 << " " >> re1000 >> endl;
   return 0;
 }

@@ -14,16 +14,15 @@ typedef long long ll;
 
 int main() {
   int a, b;
-  cin >> a>>b;
+  cin >> a >> b;
   int total = 0;
-  for_(i, a, b) { 
+  for_(i, a, b) {
     string moji = to_string(i);
-  
-  if (moji[0] == moji[4] && moji [1] == moji[3])
-  {
-    total++;
+
+    if (moji[0] == moji[4] && moji[1] == moji[3]) {
+      total++;
+    }
   }
-   }
   cout << total << endl;
   return 0;
 }
