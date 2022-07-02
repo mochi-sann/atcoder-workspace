@@ -17,10 +17,22 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  ll a;
-  cin >> a;
+  string s, t;
+  cin >> s, t;
+  vector<int> mozi(26, 0);
+  vector<char> mo;
+  for (int i = 0; i < s.size(); i++) {
+    mozi.at(s.at(i) - 97)++;
+  }
+  for (int i = 0; i < 26; i++) {
+    if (mozi.at(i) == 0) {
+      char n = i + 97;
+      cout << n << endl;
+      return 0;
+    }
+  }
+  cout << "None" << endl;
 
-  cout << a << endl;
   rrep(i, -100) { cout << i << endl; }
   return 0;
 }
