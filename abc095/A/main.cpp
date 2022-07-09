@@ -1,10 +1,13 @@
+#include <algorithm>
 #include <iostream>
+#include <set>
 #include <string>
 
 using namespace std;
 #define max(a, b) ((a) > (b) ? (a) : (b)) // 大きい方を返す
 
 #define for_(i, a, b) for (int i = (a); i < (b); ++i)
+#define for_i(i, a, b) for (int i = (a); i <= (b); ++i)
 #define rfor_(i, a, b) for (int i = (b)-1; i >= (a); --i)
 #define rep(i, n) for_(i, 0, n)
 //  rep(i, 10)cout << i << endl;
@@ -17,15 +20,17 @@ typedef long long ll;
 int main() {
   string s;
   cin >> s;
-  ll ans = 700;
-  if (s[0] == 'o')
-    ans = ans + 100;
+  int out = 700;
 
-  if (s[1] == 'o')
-    ans = ans + 100;
-  if (s[2] == 'o')
-    ans = ans + 100;
-
-  cout << ans << endl;
+  if (s[0] == 'o') {
+    out = out + 100;
+  }
+  if (s[1] == 'o') {
+    out = out + 100;
+  }
+  if (s[2] == 'o') {
+    out = out + 100;
+  }
+  cout << out << endl;
   return 0;
 }

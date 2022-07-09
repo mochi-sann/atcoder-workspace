@@ -1,8 +1,12 @@
+#include <algorithm>
 #include <iostream>
+#include <set>
+
 using namespace std;
 #define max(a, b) ((a) > (b) ? (a) : (b)) // 大きい方を返す
 
 #define for_(i, a, b) for (int i = (a); i < (b); ++i)
+#define for_i(i, a, b) for (int i = (a); i <= (b); ++i)
 #define rfor_(i, a, b) for (int i = (b)-1; i >= (a); --i)
 #define rep(i, n) for_(i, 0, n)
 //  rep(i, 10)cout << i << endl;
@@ -18,7 +22,7 @@ int main() {
   if (n % 2 == 0) {
     cout << n / 2 << endl;
   } else {
-    cout << (n + 1) / 2 << endl;
+    cout << n / 2 + 1 << endl;
   }
   return 0;
 }
