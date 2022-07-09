@@ -17,10 +17,15 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  ll a;
-  cin >> a;
-
-  cout << a << endl;
-  rrep(i, -100) { cout << i << endl; }
+  int H, W;
+  cin >> H >> W;
+  rep(i, H) {
+    string c;
+    cin >> c;
+    rep(ia, 1) {
+      cout << c << endl;
+      cout << c << endl;
+    }
+  }
   return 0;
 }

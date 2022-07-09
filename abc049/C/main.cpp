@@ -16,11 +16,34 @@ using namespace std;
 
 typedef long long ll;
 
+string divide[4] = {"dream", "dreamer", "erase", "eraser"};
 int main() {
-  ll a;
-  cin >> a;
+  string S;
+  cin >> S;
+  reverse(S.begin(), S.end());
+  for (int i = 0; i < 4; ++i)
+    reverse(divide[i].begin(), divide[i].end());
 
-  cout << a << endl;
-  rrep(i, -100) { cout << i << endl; }
+  bool can = true;
+  for (int i = 0; i < S.size();) {
+    bool can2 = false; // 4 個の文字列たちどれかで divide できるか
+    for (int j = 0; j < 4; ++j) {
+      string d = divide[j];
+      if (S.substr(i, d.size()) == d) { // d で divide できるか
+	can2 = true;
+	i += d.size(); // divide できたら i を進める
+      }
+    }
+    if (!can2) { // divide できなかったら
+      can = false;
+      break;
+    }
+  }
+
+  if (can)
+    cout << "YES" << endl;
+  else
+    cout << "NO" << endl;
+
   return 0;
 }

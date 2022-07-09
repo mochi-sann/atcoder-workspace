@@ -17,10 +17,12 @@ using namespace std;
 typedef long long ll;
 
 int main() {
-  ll a;
-  cin >> a;
-
-  cout << a << endl;
-  rrep(i, -100) { cout << i << endl; }
+  string c;
+  cin >> c;
+  if (c == "a" || c == "i" || c == "u" || c == "e" || c == "o") {
+    cout << "vowel" << endl;
+  } else {
+    cout << "consonant" << endl;
+  }
   return 0;
 }
